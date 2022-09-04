@@ -1,0 +1,27 @@
+#include <iostream>
+
+int main() {
+
+	// Strings contains 40 bytes
+	// Double contain 8 bytes
+	// Char contains 1 byte
+	// Bool contains 1 byte
+	// Int contains 4 bytes
+	// Long contains 4 bytes
+	// Long Long contains 8 bytes
+	
+	double gpa = 2.5;
+	bool student = true;
+	char grades[] = { 'A', 'B', 'C', 'D', 'F' };
+	std::string students[] = {"Spongebob", "Patrick", "Squidward", "Sandy"};
+	
+	std::cout << "The array 'students' contains " << sizeof(students) << " bytes\n";
+	std::cout << "The string type contains " << sizeof(std::string) << " bytes\n";
+	std::cout << "The division between the array 'students' and the string type would tell us that there are " << sizeof(students)/sizeof(std::string) << " elements in the array 'students'\n";
+
+	// In order to find the number of elements in an array, you must divide the size of the array with the size of the array type
+	// Ex: Each string contains 40 bytes. If you put 4 string elements in an array, the total would be 160 bytes stored inside the array
+	//	   Each char contains 1 byte. If you put 5 char elements in an array, the total would be 5 bytes stored in the array
+
+	return 0;
+}
